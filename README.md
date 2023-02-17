@@ -11,7 +11,7 @@ $ docker pull scaps/redhat-openshift-github-actions-runner:latest
 ```console
 $ helm install actions-runner openshift-actions-runner/actions-runner \
   --namespace pipe-gha-runner-$REPONAME \
-  --set-string runnerImage=scaps/redhat-openshift-github-actions-runner \
+  --set-string runnerImage=docker.io/scaps/redhat-openshift-github-actions-runner \
   --set-string runnerTag=latest \
   --set-string githubPat=$GITHUB_PAT \
   --set-string githubOwner=$GITHUB_OWNER \
